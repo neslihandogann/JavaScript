@@ -1,0 +1,63 @@
+ 
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>ŞANS TOPU</title>
+<style>
+.top{
+	background:rgba(59,182,233,1.00);
+	width:100px;
+	height:100px;
+	line-height:100px;
+	border-radius:50%;
+	text-align:center;
+	font-size:1.5em;
+	font-weight:500;
+	float:left;
+	margin:5px;
+}
+ 
+ 
+</style>
+</head>
+ 
+<body>
+ 
+<script src="https://code.jquery.com/jquery-1.12.1.min.js"></script>
+<script>
+/*sayıların belirlenmesi için gerekli global değişkenlerin tanımlanması*/
+var toplar=[],sayi,sayac=0;
+ 
+/*şanslı sayıları belirliyoruz*/
+while(sayac < 6)
+{
+	sayi=Math.floor(Math.random()*49)+1;
+	if(toplar.indexOf(sayi)==-1)
+	{
+		toplar.push(sayi);
+		sayac++;
+	}
+}
+ 
+/*toplarımızı oluşturup ekrana yerleştiriyoruz.*/
+for(i=1;i < 50;i++)
+{
+	$("<div class='top'>").appendTo($("body")).html(i);	
+}
+ 
+$(".top").each(function(index, element) {
+  
+   var kutuSayi=Number($(element).html());
+   if(toplar.indexOf(kutuSayi)>=0)
+   {
+   		$(element).css({"background":"red"});
+   }
+});
+ 
+</script>
+ 
+ 
+ 
+</body>
+</html>

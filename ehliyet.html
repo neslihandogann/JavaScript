@@ -1,32 +1,26 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html>
+
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Başlıksız Belge</title>
+    <title> basit fonksiyon örneği</title>
 </head>
-
 <body>
-<script>
-var yas=prompt("yasınızı giriniz")
-var fark=prompt;
-if(yas>=18)
-{
-	alert("ehliyet alabilir")
-}
-else
+    <script>
+        function kabul(){
+            alert("yaşınız tututyor ehliyet alabilirsiniz.");
+        }
+        function ret(){
+            alert("yaşınız tutmuyor ehliyet alamazsınız.");
+        }
+        var yas=prompt("yaşınız","yaşınızı giriniz");
+        if(yas>=18){
 
-{
-	alert("ehliyet almanıza  "+(fark=18-yas) +"    yılınız var.")
-}
-	
+            kabul();
+        }
+        else{
 
-
-
-
-
-
-
-</script>
-
+            ret();
+        }
+    </script>
 </body>
 </html>
